@@ -1,6 +1,4 @@
-// функція зворотнього виклику
-// функція може приймати 
-
+/* приклад функції */
 // const fnA = function (message, callback) {
 //     console.log(message);
 
@@ -9,28 +7,19 @@
 // };
 
 // const fnB = function (number) {
-//     console.log('fnB', number);
-// }
-
-// fnA('qweqwe, fnB');
-
-// const doMath = function (a, b, callback) {
-//     const result = callback(a, b);
-
-//     console.log(result);
-// };
-// 1 
-// const add = function (x, y) {
-//     return x + y;
-
+//     console.log("Цей лог при виклику fnB", number);
 // };
 
-// const sub = function (x, y) {
-//     return x - y;
-// };
+// fnA('qweqw', fnB);
 
-// doMath(2, 3, add);
-// doMath(10, 8, sub);
+
+// 2. inline function (анонімна фкнція яка не перевикористовується)
+const doMath = function (a, b, callback) {
+    const result = callback(a, b);
+
+    console.log(result);
+};
+
 // doMath(2, 3, function (x, y) {
 //     return x + y;
 // });
@@ -39,26 +28,15 @@
 //     return x - y;
 // });
 
-// const buttonRef = document.querySelector('.js-button');
+const buttonRef = document.querySelector('.js-button');
 
-// const handleBtnClick = function () {
-//     console.log('Klick on button');
-// };
-
-// buttonRef.addEventListener('click', handleBtnClick);
-
-
-const onGetPositionSuccesess = function (position) {
-    console.log(position);
+const handleBtnClick = function () {
+    console.log('Клікни по мені');
 };
 
-const onGetPositionError = function (error) {
-    console.log(error);
-};
+buttonRef.addEventListener('click', handleBtnClick);
 
-window.navigator.geolocation.getCurrentPosition(
-    onGetPositionSuccesess,
-    onGetPositionError,
-);
 
-//window.navigator.geolocation.getCurrentPosition
+
+
+
